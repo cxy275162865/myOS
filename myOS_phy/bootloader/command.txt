@@ -1,0 +1,6 @@
+
+	dd if=boot.bin of=/home/cxy/cxy/bochs-2.6.9/boot.img bs=512 count=1 conv=notrunc
+	mount /home/cxy/cxy/bochs-2.6.9/boot.img /media/ -t vfat -o loop
+	cp loader.bin	/media/
+	sync
+	umount /media/
